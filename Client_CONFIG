@@ -1,0 +1,10 @@
+# (C) 2019 University of NKU. Free for used
+# Author: stoneboat@mail.nankai.edu.cn
+
+#use CONFIG.mine to overwrite DIR settings
+-include CONFIG.mine
+
+Client_LDLIBS = -ldl -lpthread
+
+Client_CFLAGS = -g -Wextra -Wall $(OPTIM) -I$(ROOT) -pthread -maes -mpclmul -msse4.1 --std=c++11 
+Client_CPPFLAGS = $(CFLAGS)
